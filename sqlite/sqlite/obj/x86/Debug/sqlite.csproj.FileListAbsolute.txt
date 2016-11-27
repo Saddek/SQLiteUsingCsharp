@@ -15,3 +15,7 @@ D:\Documents_New_PC\Training\c#\sqlite\sqlite\sqlite\bin\Debug\EntityFramework.S
 D:\Documents_New_PC\Training\c#\sqlite\sqlite\sqlite\bin\Debug\System.Data.SQLite.xml
 D:\Documents_New_PC\Training\c#\sqlite\sqlite\sqlite\obj\x86\Debug\sqlite.exe
 D:\Documents_New_PC\Training\c#\sqlite\sqlite\sqlite\obj\x86\Debug\sqlite.pdb
+D:\Documents_New_PC\Training\c#\sqlite\sqlite\sqlite\bin\Debug\sqlite.exe.manifest
+D:\Documents_New_PC\Training\c#\sqlite\sqlite\sqlite\bin\Debug\sqlite.application
+D:\Documents_New_PC\Training\c#\sqlite\sqlite\sqlite\obj\x86\Debug\sqlite.exe.manifest
+D:\Documents_New_PC\Training\c#\sqlite\sqlite\sqlite\obj\x86\Debug\sqlite.application

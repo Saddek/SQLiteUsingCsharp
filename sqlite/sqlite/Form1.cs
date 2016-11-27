@@ -50,7 +50,8 @@ namespace sqlite
 
         private void createAboutDatabase()
         {
-            const string DataBaseFileName = @"D:\Documents_New_PC\Training\c#\sqlite\sqlite\localDB\SQLite\About.sqlite";
+            string Currentdir = Directory.GetCurrentDirectory();
+            string DataBaseFileName = Currentdir +"\\About.sqlite";
             File.Delete(DataBaseFileName);
             SQLiteConnection.CreateFile(DataBaseFileName);
 
