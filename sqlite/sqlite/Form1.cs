@@ -58,14 +58,14 @@ namespace sqlite
             SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source="+DataBaseFileName+"; Version=3;");
             m_dbConnection.Open();
 
-            string tableName = "friends";
+            string tableName = "Friends";
 
             string createTableQuery = string.Format(@"CREATE TABLE IF NOT EXISTS [{0}] (
                                                                       [ID] INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-                                                                      firstname VARCHAR(30),
-                                                                      lastname VARCHAR(30),
-                                                                      Age INTEGER 
-                                                                      )",tableName);
+                                                                      [Firstname] VARCHAR(30) NOT NULL,
+                                                                      [Lastname] VARCHAR(30) NOT NULL,
+                                                                      [Age] INTEGER NOT NULL
+                                                                      )", tableName);
 
             string requestNameToUse = "createTableQuery";
 
@@ -75,12 +75,14 @@ namespace sqlite
             command.ExecuteNonQuery();
 
             
-            string sqlInsertIntoResuest = string.Format(@"INSERT INTO {0} (firstname, lastname,age ) values ('KADJI','Saddek', 31)",tableName);
+            string sqlInsertIntoResuest = string.Format(@"INSERT INTO {0} values (1,'KADJI','Saddek', 31),
+                                                                                 (2,'KADJI','Mohand', 31)",
+                                                                                 tableName);
             command = new SQLiteCommand(sqlInsertIntoResuest, m_dbConnection);
             command.ExecuteNonQuery();
-            sqlInsertIntoResuest = string.Format(@"INSERT INTO {0} (firstname, lastname,age ) values ('KADJI','Mohand', 31)",tableName);
+            /*sqlInsertIntoResuest = string.Format(@"INSERT INTO {0} (firstname, lastname,age ) values ('KADJI','Mohand', 31)",tableName);
             command = new SQLiteCommand(sqlInsertIntoResuest, m_dbConnection);
-            command.ExecuteNonQuery();
+            command.ExecuteNonQuery();*/
 
             m_dbConnection.Close();
         }
@@ -92,9 +94,10 @@ namespace sqlite
 
         private void btngo_Click(object sender, EventArgs e)
         {
-            const string filename = @"D:\Documents_New_PC\Training\c#\sqlite\sqlite\localDB\SQLite\About.sqlite";
+            string Currentdir = Directory.GetCurrentDirectory();
+            string DataBaseFileName = Currentdir + "\\About.sqlite";
             const string sql = "select * from friends;";
-            var conn = new SQLiteConnection("Data Source=" + filename + ";Version=3;");
+            var conn = new SQLiteConnection("Data Source=" + DataBaseFileName + ";Version=3;");
             try
             {
                 conn.Open();
