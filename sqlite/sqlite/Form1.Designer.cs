@@ -32,6 +32,8 @@
             this.grid = new System.Windows.Forms.DataGridView();
             this.btnClose = new System.Windows.Forms.Button();
             this.CreateDB = new System.Windows.Forms.Button();
+            this.dbDescription = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +52,7 @@
             this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid.Location = new System.Drawing.Point(70, 30);
             this.grid.Name = "grid";
-            this.grid.Size = new System.Drawing.Size(498, 325);
+            this.grid.Size = new System.Drawing.Size(373, 325);
             this.grid.TabIndex = 1;
             // 
             // btnClose
@@ -73,11 +75,31 @@
             this.CreateDB.UseVisualStyleBackColor = true;
             this.CreateDB.Click += new System.EventHandler(this.CreateDB_Click);
             // 
+            // dbDescription
+            // 
+            this.dbDescription.Location = new System.Drawing.Point(199, 373);
+            this.dbDescription.Name = "dbDescription";
+            this.dbDescription.Size = new System.Drawing.Size(75, 23);
+            this.dbDescription.TabIndex = 4;
+            this.dbDescription.Text = "dbDescription";
+            this.dbDescription.UseVisualStyleBackColor = true;
+            this.dbDescription.Click += new System.EventHandler(this.dbDescription_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(461, 86);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(212, 96);
+            this.richTextBox1.TabIndex = 5;
+            this.richTextBox1.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(685, 505);
+            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.dbDescription);
             this.Controls.Add(this.CreateDB);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.grid);
@@ -95,6 +117,8 @@
         private System.Windows.Forms.DataGridView grid;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button CreateDB;
+        private System.Windows.Forms.Button dbDescription;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 
